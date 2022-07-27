@@ -1,0 +1,6 @@
+gradio
+numpy
+Pillow
+torch
+timm
+transformers
