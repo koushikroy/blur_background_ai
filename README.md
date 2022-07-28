@@ -2,6 +2,8 @@
 
 In this repo we are going to use image segmentation model(facebook/detr-resnet-50-panoptic) to generate portrait photo of any object present in a photo. Then we are going to make a deployable app using gradio and finally, we will host it in hugging face hub spaces.
 
+## Snapshot of the user interface
+
 ## Protrait Image Generation Steps:
 - Load segmentation model, pass your image, generate the masks and labels for each object present in the image.
 - Make a list of objects from the "label" keys in the prediction dictionaries.
