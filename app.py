@@ -43,7 +43,8 @@ def blurr_object(image, object, blur_strength):
     blur_image_reverse_mask = blur_image*mask_array_three_channel_invert
 
     blurred_output_image = Image.fromarray((blur_image_reverse_mask).astype(np.uint8)+segmented_image.astype(np.uint8))
-
+    for _ in range(int(blur_strength//2.5)):
+        blurred_output_image = blurred_output_image.filter(ImageFilter.SMOOTH_MORE)
     return blurred_output_image
 
 app = gr.Blocks()
@@ -94,6 +95,7 @@ with app:
                 "test_images/dog_horse_cowboy.jpg",
                 "test_images/woman_and_dog.jpg",
                 "test_images/family_in_sofa.jpg",
+                "test_images/group_of_friends.jpg",
                 "test_images/people_group.jpg"
                 ],
                 fn=image_objects,

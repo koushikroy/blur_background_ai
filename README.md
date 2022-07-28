@@ -24,6 +24,7 @@ Here is a screenshot of the interface. The app has been hosted in hugging face s
     the pixels associate with the object of interest will be blank/black/value=0.
     - Then, add up the segmented image and reverse segmented (blurred background portion). 
     This will give the desired portrait photo looking output.
+    - Smoothen the image.
 
 ## Gradio GUI Steps:
 - Used block element for more control over the interface.
