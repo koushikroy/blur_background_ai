@@ -3,7 +3,10 @@
 In this repo we are going to use image segmentation model(facebook/detr-resnet-50-panoptic) to generate portrait photo of any object present in a photo. Then we are going to make a deployable app using gradio and finally, we will host it in hugging face hub spaces.
 
 ## User Interface
-Here is a screenshot of the interface. The app has been hosted in hugging face spaces. [Click Here]() to explore the deployed version.
+Here is a screenshot of the interface. The app has been hosted in hugging face spaces. [Click Here](https://huggingface.co/spaces/rkoushikroy2/portrait_photo_generator) to explore the deployed version.
+
+---
+
 ![Interface Snapshot](interface_snapshot.png)
 > You can drag and drop images in the top left image box. After you drop an image the image segmentaion model will process the image and provide a list of objects in the drowpdown menu in the right. Now, you can choose any object from the list and that objet will be foucsed in the Output image box. You can adjust the slider to adject the strength of the background blur. The whole interface is reactive and anything you change will trigger an auto refresh. You may find the example images in lower right useful.
 
@@ -26,9 +29,13 @@ Here is a screenshot of the interface. The app has been hosted in hugging face s
     This will give the desired portrait photo looking output.
     - Smoothen the image.
 
+---
+
 ## Gradio GUI Steps:
 - Used block element for more control over the interface.
 - Used image.change, slider.change and dropdown.change event handler for generating output each time any of these changes.
+
+---
 
 ## Requirements
 ```
@@ -47,6 +54,7 @@ pip install -r requirements.txt
 ```
 python app.py
 ```
+---
 
 ## Files
 | File | Contents |
